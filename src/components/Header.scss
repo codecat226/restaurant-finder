@@ -2,44 +2,45 @@
 @import "../styles/mixins";
 
 .HeaderContainer {
+  @include mobile {
+    h1 {
+      font-size: 28px;
+    }
+    h2,
+    h3 {
+      display: none;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  gap: 1.5rem;
+
+  &__header {
+    color: $text-secondary;
+    align-self: flex-start;
+  }
+
+  &__button {
     @include mobile {
-        h1 {
-            font-size: 28px;
-        }
-        h2, h3 {
-            display: none;
-        }
-}
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem;
-    gap: 1.5rem;
-
-    &__header {
-        color: $text-secondary;
-        align-self: flex-start;
+      width: 150;
+      font-size: 14px;
+      padding: 0.5rem;
+      align-self: flex-start;
     }
+    width: 250px;
+    padding: 2rem;
+    border: 6px solid $card-primary;
+    background-color: $white;
+    text-transform: uppercase;
+    border-radius: 50px;
+    color: $text-secondary;
 
-    &__button {
-        @include mobile {
-            width: 150;
-            font-size: 14px;
-            padding: 0.5rem;
-            align-self: flex-start;
-        }
-        width: 250px;
-        padding: 2rem;
-        border: 6px solid $card-primary;
-        background-color: $white;
-        text-transform: uppercase;
-        border-radius: 50px;
-        color: $text-secondary;
-
-        &:hover {
-            background-color: rgba($card-primary, 0.3);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: rgba($card-primary, 0.3);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
     }
+  }
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -15,7 +15,8 @@ h1 {
   text-transform: uppercase;
 }
 
-h2, button {
+h2,
+button {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 2.56px;
@@ -27,7 +28,9 @@ h3 {
   letter-spacing: 0.6px;
 }
 
-p, ul, li {
+p,
+ul,
+li {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

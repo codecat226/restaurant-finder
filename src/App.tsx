@@ -1,12 +1,9 @@
 import React from "react";
-import Restaurants from "./components/Restaurants";
-import "./App.scss";
+import Restaurants from "./pages/Restaurants";
 
 function App() {
   return (
-    <main className="Main">
-      <Restaurants />
-    </main>
+    <Restaurants />
   );
 }
 
