@@ -1,0 +1,45 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    &__sortButton {
+        @include mobile {
+            align-self: flex-start;
+        }
+        border: none;
+        background-color: $white;
+        text-transform: uppercase;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        color: $text-secondary;
+    
+        &--icon {
+            width: 35px;
+            padding: 5px;
+        }
+
+        &:hover {
+            background-color: rgba($card-primary, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    &__restaurant-list {
+        list-style: none;
+        overflow: auto;
+        scrollbar-color: $card-primary $white;
+        scrollbar-width: thin;
+    }
+}
+
+.Map {
+    width: 100%;
+    margin-top: 1rem;
+}

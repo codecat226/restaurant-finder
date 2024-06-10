@@ -1,0 +1,56 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.RestaurantCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 2px solid $card-primary;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $text-secondary;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        background-color: rgba($card-primary, 0.3);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        &-header {
+            font-weight: 600;
+        }
+
+        &-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+            flex-direction: row;
+            gap: 0.25rem;
+
+        }
+        &-icon {
+            width: 15px;
+        }
+    }
+
+    &__image {
+        @include mobile {
+            display: none;
+        }
+        width: 100px;
+        height: 100px;
+        border-radius: 4px;
+    }
+
+    &--selected {
+        background-color: rgba($card-primary, 0.3);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+}
