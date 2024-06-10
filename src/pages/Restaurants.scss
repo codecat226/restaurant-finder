@@ -9,13 +9,14 @@
     gap: 1rem;
   }
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   height: 100vh;
   width: 100%;
   gap: 1rem;
 }
 
 .Container {
+  overflow: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,6 +47,9 @@
     }
   }
   &__restaurant-list {
+    @include mobile {
+      width: 100%;
+    }
     list-style: none;
     overflow: auto;
     scrollbar-color: $card-primary $white;
@@ -54,6 +58,10 @@
 }
 
 .Map {
-  width: 100%;
   margin-top: 1rem;
+  width: 100%;
+  overflow: auto;
+  @include mobile {
+    height: 400px;
+  }
 }

@@ -4,7 +4,7 @@
 .HeaderContainer {
   @include mobile {
     h1 {
-      font-size: 28px;
+      font-size: 24px;
     }
     h2,
     h3 {
@@ -27,7 +27,8 @@
       width: 150;
       font-size: 14px;
       padding: 0.5rem;
-      align-self: flex-start;
+      align-self: center;
+      border: 2px solid $card-primary;
     }
     width: 250px;
     padding: 2rem;
